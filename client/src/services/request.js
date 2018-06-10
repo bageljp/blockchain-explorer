@@ -5,27 +5,27 @@
 import agent from 'superagent';
 export const post = (uri, payload) =>
     new Promise((resolve, reject) => {
-        agent.post(uri)
+        agent.post(process.env.PUBLIC_URL + uri)
             .send(payload)
             .set('Accept', 'application/json')
             .end(withPromiseCallback(resolve, reject))
     });
 export const get = (uri) =>
     new Promise((resolve, reject) => {
-        agent.get(uri)
+        agent.get(process.env.PUBLIC_URL + uri)
             .set("Accept", "application/json")
             .end(withPromiseCallback(resolve, reject))
     });
 export const put = (uri, payload) =>
     new Promise((resolve, reject) => {
-        agent.put(uri)
+        agent.put(process.env.PUBLIC_URL + uri)
             .send(payload)
             .set('Accept', 'application/json')
             .end(withPromiseCallback(resolve, reject))
     });
 export const deleteRequest = (uri, payload) =>
     new Promise((resolve, reject) => {
-        agent.delete(uri)
+        agent.delete(process.env.PUBLIC_URL + uri)
             .send(payload)
             .set('Accept', 'application/json')
             .end(withPromiseCallback(resolve, reject))
