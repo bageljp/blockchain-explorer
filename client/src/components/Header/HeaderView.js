@@ -81,7 +81,7 @@ export class HeaderView extends Component {
 
   handleChange = (selectedOption) => {
     this.setState({ selectedOption: selectedOption.value });
-    this.props.changeChannel(selectedOption.value);
+    this.props.getChangeChannel(selectedOption.value);
   }
 
   handleOpen = () => {

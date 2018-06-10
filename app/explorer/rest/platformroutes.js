@@ -5,6 +5,7 @@ var ledgerMgr = require("./ledgerMgr");
 
 var PlatformBuilder = require("../../platform/PlatformBuilder.js");
 
+var configuration = require("../../platform/fabric/Configuration.js");
 var requtil = require("./requestutils");
 var helper=require('../../helper.js')
 var logger = helper.getLogger("main");
